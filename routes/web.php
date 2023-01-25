@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('gate', [AuthorizationController::class, 'index'])->name('gate')->middleware('can:isAdmin');
 
 Route::get('posts', [PostController::class, 'index'])->name('post.index');
+Route::get('posts', [PostController::class, 'index'])->name('post.index');
 
 Route::get('posts/{post}', [PostController::class, 'show'])->name('post.show')->middleware('can:view,post');
 
